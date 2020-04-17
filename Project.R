@@ -3,8 +3,8 @@ require(arules)
 require(plyr)
 
 #Fetching Data from online link
-priorOrderedItems <- read.csv("https://www.utdallas.edu/~psd170000/RAssignmentData/AssociationRules/instacart-market-basket-analysis/order_products__train.csv",nrows = 2000)
-ProductDetails <- read.csv("https://www.utdallas.edu/~psd170000/RAssignmentData/AssociationRules/instacart-market-basket-analysis/products.csv")
+priorOrderedItems <- read.csv("https://raw.githubusercontent.com/psk285/AR-Project/master/order_products__train.csv",nrows = 2000)
+ProductDetails <- read.csv("https://raw.githubusercontent.com/psk285/AR-Project/master/products.csv")
 
 
 #1.Frequent itemsets for products in orders dataset. You have to output
@@ -44,7 +44,7 @@ inspect(MergedFinaRules)
 #departments have highest number of orders). You have to output
 #department names and not just department id
 
-Departments <- read.csv("https://www.utdallas.edu/~psd170000/RAssignmentData/AssociationRules/instacart-market-basket-analysis/departments.csv")
+Departments <- read.csv("https://raw.githubusercontent.com/psk285/AR-Project/master/departments.csv")
 DepartmentsDetails <- ProductDetails[,c(2,3,5)]
 
 #Merging Product Details and Department Details by department_id
