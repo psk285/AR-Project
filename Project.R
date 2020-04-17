@@ -72,6 +72,3 @@ MergedDepartmentRules <- apriori (DepartmentsDetails, parameter = list(supp = 0.
 MergedDepartmentRules <- sort (MergedDepartmentRules, by="confidence", decreasing=TRUE)
 inspect(head(MergedDepartmentRules))
 
-
-prod -> https://easyupload.io/fl8ya5
-departments -> https://easyupload.io/jbgayf
