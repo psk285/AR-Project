@@ -56,7 +56,7 @@ DepsDetails <- as(DepsDetails,"transactions")
 
 itemFrequencyPlot(DepsDetails,topN=20,type="absolute", main="Frequency of Items")
 
-FrequentDepsItems <- eclat(DepsDetails, parameter = list(supp = 0.001, maxlen = 8))
+FrequentDepsItems <- eclat(DepsDetails, parameter = list(supp = 0.01, maxlen = 8))
 inspect(head(FrequentDepsItems))
 
 
@@ -67,4 +67,3 @@ inspect(head(FrequentDepsItems))
 MergedDeptRules <- apriori (DepsDetails, parameter = list(supp = 0.01, conf = 0.8))
 MergedDeptRules <- sort (MergedDeptRules, by="confidence", decreasing=TRUE)
 inspect(head(MergedDeptRules))
-
